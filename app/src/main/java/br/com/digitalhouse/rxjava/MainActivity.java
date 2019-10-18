@@ -97,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
         getUsuarios()
                 .subscribeOn(Schedulers.io())
+//                .subscribeOn(Schedulers.computation())
+//                a opção acima serve para manipulações mais pesadas
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(usuarios -> {
 //                    sucesso
